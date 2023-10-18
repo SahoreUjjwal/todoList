@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Todo List</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="todo.css">    
+        <script src="https://kit.fontawesome.com/84bedf1882.js" crossorigin="anonymous"></script>
+    </head>
+        <body>
+            <div id="container">
+                <div id="top-section">
+                    <div id="input-section">
+                        <span id="file-icon"><i class="fa-regular fa-file bullet-style"></i></span>
+                        <form id="todo-input" name="input-form">
+                            <input id ="input-area" type="text" name="todo" placeholder="Enter todo item" required>
+                        </form>
+                        <span id ="search-icon"><i id="search"class="fa-solid fa-magnifying-glass bullet-style"></i></span>
+                    </div>
+                    <div id = "input-action">
+                        <button class="button-class text-shadow" onclick="completeAll()"><i class="fa-solid fa-check-double font-color"></i><span>&nbspComplete all tasks</span></button>
+                        <button class="button-class text-shadow" onclick="clearCompleted()">Clear completed</button>
+                    </div>
+                </div>
+                <div id="mid-section">  
+                </div>
+                <div id ="footer">
+                    <div id="tasks-count" class="text-shadow">
+                    </div>
+                    <div class="task-selection">
+                        <button  id ="all" onclick="renderList('all')"><span class="text-shadow">All</span></button>
+                        <button  id ="incomplete"  onclick="renderList('incomplete')"><span class="text-shadow">Incomplete</span></button>
+                        <button  id ="completed" onclick="renderList('completed')"><span class="text-shadow">Complete</span></button>
+                    </div>
+                   
+                </div>
+            </div>
+            <div id="container-description">
+            </div>
+            <script src="script.js"></script>
+        </body>
+</html>
